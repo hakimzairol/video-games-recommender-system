@@ -10,12 +10,12 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 # Load the split datasets
-part1 = pd.read_csv("C:\\Users\\user\\Documents\\Sem 5\\Data Science Project\\cleaned_dataset_part1.csv")
-part2 = pd.read_csv("C:\\Users\\user\\Documents\\Sem 5\\Data Science Project\\cleaned_dataset_part2.csv")
+part1 = pd.read_csv("cleaned_dataset_part1.csv")
+part2 = pd.read_csv("cleaned_dataset_part2.csv")
 df_cleaned = pd.concat([part1, part2], ignore_index=True)
 
-image_data = pd.read_csv('C:\\Users\\user\\Documents\\Sem 5\\Data Science Project\\Image.csv', encoding='latin1')
-user_data = pd.read_csv('C:\\Users\\user\\Documents\\Sem 5\\Data Science Project\\user_data.csv')
+image_data = pd.read_csv("Image.csv", encoding='latin1')
+user_data = pd.read_csv("user_data.csv")
 
 
 user_features = user_data.groupby('UserID').agg(
